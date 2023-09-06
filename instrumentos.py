@@ -1,11 +1,8 @@
 from random import choice
 
 class Instrumento():
-    def __init__(self):
-        self.instrumentos=["Guitarra", "Bajo", "Bateria", "Piano"]
-
-    def elegir_instrumento(self):
-        return choice(self.instrumentos)
+    def elegir_instrumento(self, instrumentos):
+        return choice(instrumentos)
         
     def afinar_instrumento(self):
         pass
@@ -40,3 +37,10 @@ class Piano(Instrumento):
     
     def tocar_instrumento(self):
         return "Tocando Piano"
+    
+class Saxofon(Instrumento):
+    def afinar_instrumento(self):
+        return "Afinando Saxofón"
+
+    def tocar_instrumento(self):
+        return "Tocando Saxofón"
