@@ -1,4 +1,3 @@
-from instrumentos import *
 from random import choice
 
 class Musico():
