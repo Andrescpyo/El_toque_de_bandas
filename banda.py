@@ -1,32 +1,24 @@
-from musicos import Musico
 from instrumentos import *
 
-class Ventana():
-    def __init__(self, root, imagen):
-        self.root = root
-        self.root.title("Ventana con Imagen")
-        self.imagen = tk.PhotoImage(file = imagen)
-        self.imagen = self.imagen.subsample(2, 2)
-        self.label_imagen = tk.Label(root, image=self.imagen)
-        self.label_imagen.pack()
+class Principal():
+    root = tk.Tk()
+    root.title("Banda Aleatoria")
 
-c = Instrumento()
-instrumentos = [Guitarra(), Bajo(), Bateria(), Piano(), Saxofon()]
-banda =[]
-root = tk.Tk()
-imagenes= []
+    canvas = tk.Canvas(root, width=900, height=500, bg="white")
+    canvas.pack()
 
-for i in range(5):
-    inst= c.elegir_instrumento(instrumentos)
-    banda.append(inst)
+    instrumentos = [Guitarra(), Bajo(), Bateria(), Piano(), Saxofon()]
+    imagenes = []
 
-for i in banda:
-    imagenes.append(i.imagen())
+    for _ in range(5):
+        inst = choice(instrumentos)
+        imagenes.append(inst.imagen())
 
-for i in imagenes:
-    ventana= Ventana(root, i)
+    x = 50
+    separacion = 20
 
-root.mainloop()
+    for imagen in imagenes:
+        canvas.create_image(x, 100, image=imagen, anchor=tk.NW)
+        x += imagen.width() + separacion
 
-    
-
+    root.mainloop()
