@@ -8,7 +8,7 @@ class Instrumento():
 
 class Guitarra(Instrumento):
     def imagen(self):
-        img = Image.open("AfinarGuitarra.png")
+        img = Image.open("Guitarra.png")
         img = img.resize((150, 150))
         return ImageTk.PhotoImage(img)
 
@@ -32,7 +32,7 @@ class Piano(Instrumento):
 
 class Saxofon(Instrumento):
     def imagen(self):
-        img = Image.open("Guitarra.png")
+        img = Image.open("Saxofon.png")
         img = img.resize((150, 150))
         return ImageTk.PhotoImage(img)
 
