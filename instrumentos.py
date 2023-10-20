@@ -8,31 +8,31 @@ class Instrumento():
 
 class Guitarra(Instrumento):
     def imagen(self):
-        img = Image.open("Guitarra.png")
+        img = Image.open("image/Guitarra.png")
         img = img.resize((150, 150))
         return ImageTk.PhotoImage(img)
 
 class Bajo(Instrumento):
     def imagen(self):
-        img = Image.open("Bajo.png")
+        img = Image.open("image/Bajo.png")
         img = img.resize((150, 150))
         return ImageTk.PhotoImage(img)
 
 class Bateria(Instrumento):
     def imagen(self):
-        img = Image.open("Bateria.png")
+        img = Image.open("image/Bateria.png")
         img = img.resize((150, 150))
         return ImageTk.PhotoImage(img)
 
 class Piano(Instrumento):
     def imagen(self):
-        img = Image.open("Piano.png")
+        img = Image.open("image/Piano.png")
         img = img.resize((150, 150))
         return ImageTk.PhotoImage(img)
 
 class Saxofon(Instrumento):
     def imagen(self):
-        img = Image.open("Saxofon.png")
+        img = Image.open("image/Saxofon.png")
         img = img.resize((150, 150))
         return ImageTk.PhotoImage(img)
 
